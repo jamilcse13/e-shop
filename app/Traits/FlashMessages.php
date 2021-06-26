@@ -59,10 +59,10 @@ trait FlashMessages
 
         if (is_array($message)) {
             foreach ($message as $key => $value) {
-                array_push($this->model, $value);
+                array_push($this->$model, $value);
             }
         } else {
-            array_push($this->model, $message);
+            array_push($this->$model, $message);
         }
     }
 
@@ -78,7 +78,7 @@ trait FlashMessages
             'error' => $this->errorMessages,
             'info' => $this->infoMessages,
             'success' => $this->successMessages,
-            'warning' => $this->$this->warningMessages
+            'warning' => $this->warningMessages
         ];
     }
 
@@ -88,11 +88,11 @@ trait FlashMessages
      *
      * @return void
      */
-    protected function showFlushMessages()
+    protected function showFlashMessages()
     {
-        session()->falsh('error', $this->errorMessages);
-        session()->falsh('info', $this->infoMessages);
-        session()->falsh('success', $this->successMessages);
-        session()->falsh('warning', $this->warningMessages);
+        session()->flash('error', $this->errorMessages);
+        session()->flash('info', $this->infoMessages);
+        session()->flash('success', $this->successMessages);
+        session()->flash('warning', $this->warningMessages);
     }
 }

@@ -43,7 +43,7 @@ class Setting extends Model
     public static function set($key, $value = null)
     {
         $setting = new self();
-        $entry = $setting->where('key', $key)->findOrfail();
+        $entry = $setting->where('key', $key)->firstOrFail();
         $entry->value = $value;
         $entry->saveOrFail();
         Config::set('key', $value);
