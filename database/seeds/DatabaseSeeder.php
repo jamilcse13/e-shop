@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Prophecy\Call\Call;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,5 +14,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AdminsTableSeeder::class);
         $this->call(SettingsTableSeeder::class);
+        $this->call(CategoriesTableSeeder::class);
     }
 }
