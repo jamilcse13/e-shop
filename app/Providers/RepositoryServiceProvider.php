@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use App\Contracts\AttributeContract;
+use App\Contracts\BrandContract;
 use App\Contracts\CategoryContract;
 use App\Repositories\AttributeRepository;
+use App\Repositories\BrandRepository;
 use App\Repositories\CategoryRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,6 +15,7 @@ class RepositoryServiceProvider extends ServiceProvider
     protected $repositories = [
         CategoryContract::class => CategoryRepository::class,
         AttributeContract::class => AttributeRepository::class,
+        BrandContract::class => BrandRepository::class,
     ];
     
 
