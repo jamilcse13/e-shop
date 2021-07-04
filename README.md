@@ -15,3 +15,17 @@
 # 13. for vueJS, i needed to change resource/app.js, webpack,mix.js, added vue-swal packages on package.json, run 'npm install', 
 # 14. Created Contact and Repository file.
 # 15. for Brands, it like categories.
+
+# 16.  Here are some features, which we would like to implement in our products.
+
+* A product will belong to a Brand.
+* A product will belong to many categories and a category will have many products.
+* As we know most of the eCommerce websites display multiple images for a product. So we need to have a model for images, then we can define a product have many images features.
+* A product also can have many attributes with different quantity and price.
+
+##
+* You might be wondering, we already have the quantity column in products table, so why have it in the product attributes table.
+The only reason for defining the quantity in both tables is, there can be some products which don’t have attributes. So we can use the quantity column from the products table. Hope, I cleared the point.
+* we created a pivot table to link ProductAttribute with the AttributeValue.
+* The whole reason for taking this approach is to access the attribute values with different price and quantity for a given product.
+

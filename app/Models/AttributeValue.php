@@ -30,8 +30,24 @@ class AttributeValue extends Model
     ];
 
 
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
     public function attribute()
     {
         return $this->belongsTo(Attribute::class);
+    }
+
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function productAttributes()
+    {
+        return $this->belongsToMany(ProductAttribute::class);
     }
 }
