@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Models;
+<?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,7 +14,7 @@ class ProductAttribute extends Model
     /**
      * @var array
      */
-    protected $fillable = ['product_id', 'quantity', 'price'];
+    protected $fillable = ['product_id', 'quantity', 'price', 'attribute_id', 'value'];
 
 
     /**
@@ -38,5 +36,11 @@ class ProductAttribute extends Model
     public function attributeValues()
     {
         return $this->belongsToMany(AttributeValue::class);
+    }
+
+
+    public function attribute()
+    {
+        return $this->belongsTo(Attribute::class);
     }
 }
