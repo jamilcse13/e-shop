@@ -51,4 +51,21 @@ interface CategoryContract
      * @return void
      */
     public function deleteCategory($id);
+
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function treeList();
+
+
+    /**
+     * Undocumented function
+     *
+     * @param [type] $slug
+     * @return void
+     */
+    public function findBySlug($slug);
 }
