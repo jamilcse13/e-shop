@@ -45,4 +45,13 @@ interface ProductContract
      * @return bool
      */
     public function deleteProduct($id);
+
+
+    /**
+     * Undocumented function
+     *
+     * @param [type] $slug
+     * @return void
+     */
+    public function findProductBySlug($slug);
 }
