@@ -32,3 +32,7 @@ The only reason for defining the quantity in both tables is, there can be some p
 * 17. used NestableTrait for nested listing. just used nest() and listsFlattened() methods for category list.
 * 18. send categories to site.partials.nav from ViewComposerServiceProvider.
 
+### cart plugin
+- we used "darryldecode/cart:~4.0" this plugin for cart.
+- composer require "darryldecode/cart:~4.0"
+- we added Cart alias at config/app for Darryldecode\Cart\Facades\CartFacade::class

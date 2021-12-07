@@ -19,11 +19,9 @@ class ProductController extends Controller
         $this->attributeRepository = $attributeRepository;
     }
 
-
     public function show($slug)
     {
         $product = $this->productRepository->findProductBySlug($slug);
-//         dd($slug);
         $attributes = $this->attributeRepository->listAttributes();
 
         return view('site.pages.product', compact('product', 'attributes'));
