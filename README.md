@@ -36,3 +36,10 @@ The only reason for defining the quantity in both tables is, there can be some p
 - we used "darryldecode/cart:~4.0" this plugin for cart.
 - composer require "darryldecode/cart:~4.0"
 - we added Cart alias at config/app for Darryldecode\Cart\Facades\CartFacade::class
+
+### Payment Process
+- we are using paypal payment method for this
+- firstly we have installed paypal SDK in our project:
+  - composer require paypal/rest-api-sdk-php
+- then we created a developer account in paypal and generate credential
+- we set up **PAYPAL_CLIENT_ID** and **PAYPAL_SECRET_ID** to config-env
