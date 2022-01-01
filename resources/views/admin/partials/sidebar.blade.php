@@ -13,7 +13,12 @@
                 <span class="app-menu__label">Dashboard</span>
             </a>
         </li>
-        {{-- <li class="treeview">
+        <li>
+            <a class="app-menu__item {{ Route::currentRouteName() == 'admin.orders.index' ? 'active' : '' }}" href="{{ route('admin.orders.index') }}"></a>
+            <i class="app-menu__icon fa fa-bar-chart"></i>
+            <span class="app-menu__label">Orders</span>
+        </li>
+        <li class="treeview">
             <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-users"></i>
                 <span class="app-menu__label">Users</span>
                 <i class="treeview-indicator fa fa-angle-right"></i>
@@ -29,7 +34,7 @@
                     <a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Permissions</a>
                 </li>
             </ul>
-        </li> --}}
+        </li>
         <li>
             <a class="app-menu__item {{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}" href="{{ route('admin.settings') }}">
                 <i class="app-menu__icon fa fa-cogs"></i>
